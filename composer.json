@@ -1,0 +1,15 @@
+{
+    "require": {
+        "jefyokta/oktaax": "^1.4.42",
+        "firebase/php-jwt": "^6.10",
+        "vlucas/phpdotenv": "^5.6"
+
+    },
+    "autoload":{
+        "psr-4":{
+            "Kamela\\Services\\":"app/Services",
+            "Kamela\\Models\\":"app/Models"
+
+        }
+    }
+}

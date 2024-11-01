@@ -1,0 +1,8 @@
+<?php
+require_once __DIR__ . "/app/Command/Command.php";
+
+$argument = $argv;
+
+
+$command = new Command();
+$command->handle($argument);

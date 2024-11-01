@@ -1,0 +1,16 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [101.542952, -0.512565]
+        },
+        "properties": {
+          "description": "Unnamed road, Taluk Kuantan, Riau, Indonesia"
+        }
+      }
+    ]
+  }
+  

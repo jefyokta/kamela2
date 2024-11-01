@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./resources/css/input.css -o ./resources/css/app.css --watch"
+  },
+  "dependencies": {
+    "flowbite": "^2.5.2",
+    "three": "^0.169.0"
+  }
+}

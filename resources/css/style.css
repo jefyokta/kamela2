@@ -1,0 +1,84 @@
+
+.house{
+    fill:rgba(176, 202, 99, 0.413);
+    stroke:#000000;
+    stroke-width:0.3;
+    z-index: 1;
+    stroke-linejoin:bevel
+}
+.house:hover{
+    fill:#03fef174;
+    stroke:#00fffb;
+    stroke-width:1;
+    stroke-linejoin:bevel
+
+}
+.houseclicked{
+    fill:#1e3b2b !important;
+    stroke:#00fffb !important;
+    stroke-width:1;
+    z-index: 9999;
+    stroke-linejoin:bevel
+
+}
+.svg-container{
+    /* position: relative; */
+    
+    overflow-x: scroll;
+    margin: 0;
+    /* max-width: 100%; */
+}
+.type36{
+    fill:rgba(173, 122, 255, 0.234);
+    stroke:rgba(53, 19, 107, 0.834);
+    stroke-width:0.3;
+    z-index: 1;
+    stroke-linejoin:bevel
+}
+.type45{
+    fill:rgba(255, 195, 122, 0.206);
+    stroke:rgba(114, 63, 0, 0.806);
+    stroke-width:0.3;
+    z-index: 1;
+    stroke-linejoin:bevel
+}
+.type54{
+    fill:rgba(122, 255, 162, 0.254);
+    stroke:rgba(11, 84, 33, 0.854);
+    stroke-width:0.3;
+    z-index: 1;
+    stroke-linejoin:bevel
+
+}
+.status300{
+    fill:#001945c0;
+    stroke:#002d7b7f;
+    stroke-width:0.3;
+    z-index: 1;
+    stroke-width: 1;
+
+    stroke-linejoin:bevel
+    
+}
+.status400{
+  
+    fill:#9b1c1c9e;
+    stroke:#9b1c1c;
+    stroke-width:0.3;
+    z-index: 1;
+    stroke-width: 1;
+    stroke-linejoin:bevel
+}
+.bg-glass{
+    background-color: rgba(240, 248, 255, 0.07);
+    backdrop-filter: blur(10px);
+}
+.hover\:\bg-glass{
+    background-color: rgba(240, 248, 255, 0.07);
+    backdrop-filter: blur(10px);
+}
+#donut-chart .apexcharts-datalabel-label,
+#donut-chart .apexcharts-datalabel-value {
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif;
+}
