@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./resources/**/*.{php,css,js}", "./node_modules/flowbite/**/*.js"],
+  content: ["./resources/**/*.{php,css,js}", "./node_modules/flowbite/**/*.js","./public/js/*.js","./public/build/**/*.{js,css}"],
   theme: {
     extend: {
       borderWidth: {

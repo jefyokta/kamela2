@@ -3,3 +3,6 @@
 .env
 ./public/models/*.glb
 ./public/models/*.gltf
+.DS_Store
+/resources/css/app.css
+/public/build

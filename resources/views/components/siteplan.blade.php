@@ -22,8 +22,8 @@
             <div
                 class="bg-glass text-indigo-300 border-sm border-indigo-300/50 hover:bg-indigo-300/90 hover:text-black  rounded-md p-5 my-5 w-full hover:bg-slate-500 flex justify-between item-center">
                 <p> Type 36</p>
-                <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M19 12H5m14 0-4 4m4-4-4-4" />
                 </svg>
@@ -34,8 +34,8 @@
             <div
                 class="bg-glass text-yellow-300 border-sm border-yellow-300/50 hover:bg-yellow-300/90 hover:text-black  rounded-md p-5 my-5 w-full hover:bg-slate-500 flex justify-between item-center">
                 <p> Type 45</p>
-                <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M19 12H5m14 0-4 4m4-4-4-4" />
                 </svg>
@@ -45,8 +45,8 @@
             <div
                 class="bg-glass text-emerald-300 border-sm border-emerald-300/90 hover:text-black hover:bg-emerald-300/50 rounded-md p-5 my-5 w-full hover:bg-slate-500 flex justify-between item-center">
                 <p> Type 66</p>
-                <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M19 12H5m14 0-4 4m4-4-4-4" />
                 </svg>
@@ -146,6 +146,7 @@
                 <div class="px-3 py-2 w-full h-32">
                     <p class="font-bold text-xl text-yellow-300"> Blok {{ $data['blok'] }} NO {{ $data['no'] }}</p>
                     <p class="font-bold"> Rp {{ Kamela\Services\ToIDR::convert($data['price']) }} </p>
+
                     @php
                         switch ($data['status']) {
                             case 200:
@@ -167,9 +168,34 @@
                         }
                     @endphp
                     <div class="flex justify-between w-full items-center mt-5">
-                        <p class=" font-bold">{!! $status !!}</p>
+                        <p class=" font-bold" id="status-{{ $data['id'] }}">{!! $status !!}</p>
                         @if ($data['status'] < 300 || $status == null)
                             <div class="flex justify-start w-full ">
+                                <a href="javascript:void(0)" data-dropdown-toggle="dropdown{{ $data['id'] }}"
+                                    class="bg-blue-500/50 hover:bg-blue-200 flex justify-between items-center text-white hover:text-black text-xs font-semibold me-2 px-2.5 py-0.5 rounded hover:no-underline"><span>Booking</span>
+                                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
+                                    </svg></a>
+                            </div>
+                            <div id="dropdown{{ $data['id'] }}"
+                                class="z-50 hidden bg-slate-700 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                <ul class="py-2 text-sm text-gray-100 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefaultButton">
+                                    <li>
+                                        <a href="/house/booking?h={{ $data['id'] }}&m=1"
+                                            class="block px-4 py-2 hover:bg-glass dark:hover:bg-gray-600 dark:hover:text-white">Cash</a>
+                                    </li>
+                                    <li>
+                                        <a href="/house/booking?h={{ $data['id'] }}"
+                                            class="block px-4 py-2 hover:bg-glass dark:hover:bg-gray-600 dark:hover:text-white">Credit</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        @else
+                            <div class="flex justify-start w-full " style="visibility: hidden"
+                                id="booking-{{ $data['id'] }}">
                                 <a href="javascript:void(0)" data-dropdown-toggle="dropdown{{ $data['id'] }}"
                                     class="bg-blue-500/50 hover:bg-blue-200 flex justify-between items-center text-white hover:text-black text-xs font-semibold me-2 px-2.5 py-0.5 rounded hover:no-underline"><span>Booking</span>
                                     <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -202,4 +228,3 @@
         </div>
     @endforeach
 </section>
-

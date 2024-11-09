@@ -7,6 +7,7 @@ use Kamela\Models\Type;
 use Oktaax\Http\Request;
 use Oktaax\Http\Response;
 use Oktaax\Http\ResponseJson;
+use Swoole\Coroutine\Http\Client;
 
 class HouseController
 {
@@ -47,7 +48,24 @@ class HouseController
 
       $r = House::update(["status" => $status], ["id" => $id])->run(true);
       if ($r > 0) {
-         $res->status(200)->json(new ResponseJson(['msg' => "ok"]));
+
+         go(function () use ($res) {
+            $res->status(200)->json(new ResponseJson(['msg' => "ok"]));
+         });
+
+         go(function () use ($status, $id) {
+            $client = new Client(config('app.host'), config('app.port'),true);
+
+            if ($client->upgrade("/notification/house")) {
+               $message = json_encode([
+                  "id" => $id,
+                  "status" => $status
+               ]);
+               $client->push($message);
+            } else {
+               echo "Upgrade ke WebSocket gagal.";
+            }
+         });
       } else {
          $res->status(500)->json(new ResponseJson(['msg' => "notok"]));
       }

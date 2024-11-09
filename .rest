@@ -1,6 +1,0 @@
-POST http://localhost:8000/login HTTP/1.1
-
-{
-    "username":"jefyokta",
-    "password":"123"
-}

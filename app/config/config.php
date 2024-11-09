@@ -39,8 +39,14 @@ function url($url)
 
     return $url;
 }
-// function request(): Request
-// {
-//     global $currentRequest; 
-//     return $currentRequest;
-// }
+
+
+function vite($path) {
+    $manifestPath = __DIR__ . '/../../public/build/.vite/manifest.json';
+    if (!file_exists($manifestPath)) {
+        throw new Exception('Vite manifest not found.');
+    }
+
+    $manifest = json_decode(file_get_contents($manifestPath), true);
+    return "/build/".$manifest[$path]['file'] ?? null;
+}

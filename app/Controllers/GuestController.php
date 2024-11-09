@@ -10,6 +10,7 @@ use Oktaax\Http\Response;
 use Oktaax\Http\ResponseJson;
 use RuntimeException;
 use Swoole\Coroutine;
+use Swoole\Coroutine\Http\Client;
 
 class GuestController
 {
@@ -67,7 +68,7 @@ class GuestController
          } else {
             $active = 0;
 
-            $res->render("pages.booking", compact("house", "req","active"));
+            $res->render("pages.booking", compact("house", "req", "active"));
          }
       } else {
          $res->status("404")->end("not found");
@@ -79,10 +80,12 @@ class GuestController
       $phonenumber = $req->post("nohp");
       $email = $req->post("email");
       $job = $req->post("pekerjaan");
-      $houseid = $req->post("rumahid");
+      $houseid = $req->body("rumahid");
       $file = $req->files['document'] ?? null;
 
-      $method = $req->post("metode") ?? null;
+
+
+      $method = $req->post("metode") ?? 0;
 
       $house = House::find($houseid);
 
@@ -104,15 +107,17 @@ class GuestController
             }
             $allowedFiles = ["docx", "pdf"];
             $destination = $uploadDir . uniqid() . "_" . basename($file['name']);
-            $fileName = end(explode("/", $destination));
-            $fileExt = end(explode('.', $fileName)) ?? "";
+            $fileParts = explode("/", $destination);
+            $fileName = end($fileParts);
+
+            $fileExtParts = explode('.', $fileName);
+            $fileExt = end($fileExtParts) ?? "";
+
             if (!in_array($fileExt, $allowedFiles)) {
-               return $res->withError("File harus berformat docx atau pdf")->status(302)->redirect($req->request->header['referer']);
+               return $res->withError("File harus berformat docx atau pdf")->status(302)->back();
             } else {
                $src = Coroutine::readFile($file['tmp_name']);
                if ($src) {
-
-
                   $result = Coroutine::writeFile($destination, $src);
                   if ($result === false) {
                      throw new RuntimeException("Gagal menyimpan file.");
@@ -123,25 +128,42 @@ class GuestController
 
                   Console::info("File uploaded: {$file['name']}");
 
-                  $reuslt =    Guest::insert([
+                  $result =    Guest::insert([
                      "name" => $name,
                      "phone_number" => $phonenumber,
                      "email" => $email,
                      "pekerjaan" => $job,
                      "document" => $fileName,
                      "rumahid" => $houseid,
-                     "metode" => $method
+                     "metode" => $method === 1 ? 1 : 0
                   ])->run(true);
                   if ($result > 0) {
-                     $res->with("Berhasil Memesan")->status(302)->redirect("/siteplan");
+                     go(function () use ($res) {
+                        $res->with("Berhasil Memesan")->status(302)->back();
+                     });
+                     go(function () use ($houseid, $name) {
+                        $client = new Client(config('app.host'), config('app.port'),true);
+
+                        if ($client->upgrade("/notification")) {
+                           $message = json_encode([
+                              'event' => 'booking',
+                              'message' => 'Ada tamu baru yang membooking rumah!',
+                              "houseId" => $houseid,
+                              "guestName" => $name,
+                           ]);
+                           $client->push($message);
+                        } else {
+                           echo "Upgrade ke WebSocket gagal.";
+                        }
+                     });
                   }
                } else {
-                  $res->withError("Gagal Membuka file ")->status(302)->redirect($req->request->header['referer'] ?? "/siteplan");
+                  $res->withError("Gagal Membuka file ")->status(302)->back();
                }
             }
          });
       } else {
-         $res->withError("File Tidak ada")->status(302)->redirect($req->request->header['referer'] ?? "/siteplan");
+         $res->withError("File Tidak ada")->status(302)->back();
       }
    }
 

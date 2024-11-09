@@ -72,7 +72,7 @@ class Auth
      */
     public static function tokenVerify(Request $req, Response $res, callable $next)
     {
-        $token = $req->request->cookie['X-KamelaSess'];
+        $token = $req->cookie('X-KamelaSess') ?? false;
 
         if ($token) {
             try {
@@ -92,7 +92,6 @@ class Auth
             $next($decoded);
         } else {
             $res->response->redirect('/login');
-            Console::error("ngentot");
         }
     }
 

@@ -100,12 +100,12 @@ class AdminController
    }
    private function monthly()
    {
-      return Guest::raw("SELECT * FROM tamu WHERE MONTH(created_at) = MONTH(CURDATE()) AND YEAR(created_at) = YEAR(CURDATE());")->run(true) ?? 0;
+      return floor((Guest::raw("SELECT * FROM tamu WHERE MONTH(created_at) = MONTH(CURDATE()) AND YEAR(created_at) = YEAR(CURDATE());")->run(true) ?? 0) * 100) / 100;
    }
 
    private function mothlymethod()
    {
-      return Guest::raw("SELECT * FROM tamu WHERE metode = 1 AND MONTH(created_at) = MONTH(CURDATE()) AND YEAR(created_at) = YEAR(CURDATE());")->run(true) ?? 0;
+      return floor((Guest::raw("SELECT * FROM tamu WHERE metode = 1 AND MONTH(created_at) = MONTH(CURDATE()) AND YEAR(created_at) = YEAR(CURDATE());")->run(true) ?? 0)*100)/100;
    }
 
    private function soldAndUnsold($type = null): array
@@ -116,40 +116,6 @@ class AdminController
          $sold =  House::select("*")->where("status", '=', 400)->run(true) ?? 0;
          $booked =  House::select("*")->where("status", '=', 300)->run(true) ?? 0;
          return ["sold" => $sold, "unsold" => $unsold, "booked" => $booked];
-
-
-         // Coroutine::run(function () {
-         //    $chan = new Channel(3);
-
-         //    go(function () use ($chan) {
-         //       $unsold = House::select("*")->where("status", '!=', 400)->run(true) ?? 0;
-         //       $chan->push(['unsold' => $unsold]);
-         //    });
-
-         //    go(function () use ($chan) {
-         //       $sold = House::select("*")->where("status", '=', 400)->run(true) ?? 0;
-         //       $chan->push(['sold' => $sold]);
-         //    });
-
-         //    go(function () use ($chan) {
-         //       $booked = House::select("*")->where("status", '=', 300)->run(true) ?? 0;
-         //       $chan->push(['booked' => $booked]);
-         //    });
-
-         //    $results = [];
-         //    for ($i = 0; $i < 3; $i++) {
-         //       $results[] = $chan->pop();
-         //    }
-
-         //    $chan->close();
-
-         //    $finalResults = [];
-         //    foreach ($results as $result) {
-         //       $finalResults = array_merge($finalResults, $result);
-         //    }
-
-         //    return $finalResults; // Mengembalikan hasil akhir
-         // });
       } else {
 
          $unsold =  House::select("*")->where("type", '=', $type)->andWhere("status", '!=', 400)->run(true) ?? 0;
@@ -172,7 +138,7 @@ class AdminController
             return 0;
          } elseif ($cur !== 0 && $lastMonth !== 0) {
             $result = (($cur - $lastMonth) / $lastMonth) * 100;
-            return $result;
+            return floor($result * 100) / 100;
          } else {
             return 0;
          }

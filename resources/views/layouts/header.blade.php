@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/app">
+    <link rel="stylesheet" href="{{ vite('resources/css/app.css') }}">
     <link rel="stylesheet" href="/css/style">
     <link rel="stylesheet" href="/css/flowbite">
 
-    <script src="/js/app"></script>
+    <script src={{ vite('resources/js/app.js') }}></script>
+    <script src={{ vite('resources/js/bootstrap.js') }}></script>
+
     <title>{{ $title ?? 'Kamela Permai' }}</title>
 </head>
 
 <body class="bg-[url('/img?f=background.jpg')] bg-fixed bg-cover  text-white">
-    @isset($request->request->cookie['X-message'])
+    @hasMessage
         <div id="toast-success"
             class="flex fixed bottom-5 right-5 items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
             role="alert" style="z-index: 999999999">
@@ -27,7 +29,7 @@
                 </svg>
                 <span class="sr-only">Check icon</span>
             </div>
-            <div class="ms-3 text-sm font-normal">{{ $request->cookie['X-message'] }}</div>
+            <div class="ms-3 text-sm font-normal">{{ $message }}</div>
             <button type="button"
                 class="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
                 data-dismiss-target="#toast-success" aria-label="Close">
@@ -39,9 +41,9 @@
                 </svg>
             </button>
         </div>
-    @endisset
+    @endHasMessage
 
-    @isset($request->request->cookie['X-errmessage'])
+    @hasErrorMessage
         <div id="toast-danger"
             class="flex fixed bottom-5 right-5  items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
             role="alert" style="z-index: 999999999">
@@ -54,7 +56,7 @@
                 </svg>
                 <span class="sr-only">Error icon</span>
             </div>
-            <div class="ms-3 text-sm font-normal">{{ $request->request->cookie['X-errmessage'] }}</div>
+            <div class="ms-3 text-sm font-normal">{{ $message }}</div>
             <button type="button"
                 class="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
                 data-dismiss-target="#toast-danger" aria-label="Close">
@@ -66,4 +68,4 @@
                 </svg>
             </button>
         </div>
-    @endisset
+    @endHasErrorMessage

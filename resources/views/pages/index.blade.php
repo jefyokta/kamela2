@@ -4,11 +4,16 @@
     <section class="w-full flex justify-center items-center min-h-screen" id="home">
         <div class="text-center">
             <h1 class="text-8xl text-teal-100/90 font-extrabold">Kamela Permai</h1>
-            <p class="text-2xl mt-5 mb-20 text-gray-500">Perumahan nan Asri Dan Nyaman</p>
+            <p class="text-2xl mt-5  text-gray-300">Perumahan nan Asri Dan Nyaman</p>
+            <p class="text-1xl mt-5 mb-20 text-gray-500">Jl. Datuak Bandaro Nan Putiah , Taluk Kuantan, Kuantan Singingi Riau
+            </p>
             <div class="mt-20">
                 <a href="/siteplan"
                     class=" hover:bg-slate-100 hover:text-black border-sm border-slate-100  bg-glass text-white/90 rounded-md py-3 px-5">Pesan
                     Sekarang</a>
+                <a href="/gambar/brosur.jpeg" target="_blank"
+                    class=" hover:bg-slate-100 hover:text-black border-sm border-blue-300  bg-blue-500/50 text-white/90 rounded-md ms-3 py-3 px-5">Download
+                    Brousur</a>
             </div>
         </div>
 
@@ -43,7 +48,7 @@
 
     </div>
     @include('components.location')
-    <script type="importmap">
+    {{-- <script type="importmap">
         {
           "imports": {
             "three": "/nodemod?f=three/build/three.module.js",
@@ -57,9 +62,9 @@
             "BufferGeometry":"/nodemod?f=three/examples/jsm/utils/BufferGeometryUtils.js"
         }
         }
-      </script>
+      </script> --}}
 
-    <script src="/js?f=three.js" type="module"></script>
+    <script src="{{ vite("resources/js/three.js") }}" type="module"></script>
 
     <script>
         const type36s = document.getElementById("type36")

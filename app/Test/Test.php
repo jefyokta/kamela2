@@ -6,20 +6,34 @@ use Kamela\Models\Type;
 use Kamela\Models\User;
 use Oktaax\Console;
 use Oktaax\Oktaa;
+use Swoole\Client;
 use Swoole\Coroutine;
 use Swoole\Coroutine\Channel;
+use Swoole\Coroutine\Http\Client as HttpClient;
 
-require_once __DIR__ . "/../init.php";
+require_once __DIR__ . "/../../vendor/autoload.php";
 
 return new class
 {
     public function run()
     {
 
-        Coroutine::run(function () {
+        function getMimeType($file)
+        {
+            // Memastikan file ada
+            if (!is_file($file)) {
+                return false;
+            }
 
-            var_dump($this->async());
-        });
+            // Menggunakan finfo untuk mendeteksi MIME type
+            $finfo = finfo_open(FILEINFO_MIME_TYPE); // Dapatkan tipe MIME
+            $mimeType = finfo_file($finfo, $file);
+            finfo_close($finfo);
+
+            return $mimeType;
+        }
+
+       echo getMimeType(__DIR__."/../../public/build/assets/app-CudV09GM.js");
     }
 
     public function seed()
@@ -80,7 +94,22 @@ return new class
             $finalResults = array_merge($finalResults, $result);
         }
 
-        return $finalResults; // Mengembalikan hasil akhir
-        //  });
+        return $finalResults;
+    }
+
+    private function connect()
+    {
+
+        $client = new HttpClient('127.0.0.1', 8000);
+        $client->upgrade('/notification');
+
+        $message = [
+            'event' => 'booking',
+            'message' => 'Ada tamu baru yang membooking rumah!'
+        ];
+
+        $client->push(json_encode($message));
+
+        // $client->close();
     }
 };
