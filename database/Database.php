@@ -7,6 +7,8 @@ use PDO;
 use PDOException;
 use InvalidArgumentException;
 use Oktaax\Console;
+use Swoole\Coroutine;
+use Swoole\Process;
 
 Runtime::enableCoroutine(true, SWOOLE_HOOK_ALL);
 
@@ -48,9 +50,15 @@ abstract class Database
 
             if (!$databaseExists) {
                 Console::warning(" database `{$this->db} doesnt'nt exist`");
-                Console::info("Creating....");
-                $pdo->exec("CREATE DATABASE `$this->db`");
-                Console::info("Database {$this->db} created!");
+
+                $accept = readline("wanna create it?[y/n]\n");
+                if (stripos($accept, 'y') === false) {
+                    exit(0);
+                } else {
+                    Console::info("Creating....");
+                    $pdo->exec("CREATE DATABASE `$this->db`");
+                    Console::info("Database {$this->db} created!");
+                }
             }
 
             $this->dbh = new PDO(config('db.connection') . ":host=$this->host;port=$this->port;dbname=$this->db", $this->user, $this->password);

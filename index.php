@@ -226,23 +226,6 @@ $app->onOpen(function (Server $server, Request $request, Table &$table) {
     ]);
 });
 
-$app->get("/trigger", function ($req, $res) {
-    go(function () use ($res) {
-        $client = new Client('kamela-permai.oktaa', 8000, true);
-
-        if ($client->upgrade("/notification/house")) {
-            $message = json_encode([
-                'event' => 'booking',
-                'message' => 'Ada tamu baru yang membooking rumah!'
-            ]);
-            $client->push($message);
-            $res->end();
-        } else {
-            echo "Upgrade ke WebSocket gagal.";
-        }
-    });
-});
-
 
 $app->ws("/notification", [Notification::class, 'handle'])
     ->ws("/notification/house", [Notification::class, 'house']);
@@ -251,6 +234,6 @@ $app->ws("/notification", [Notification::class, 'handle'])
 
 $app
     ->withSSL(__DIR__ . "/cert/kamela-cert.pem", __DIR__ . "/cert/kamela-key.pem")
-    ->listen(8000, "kamela-permai.oktaa", function ($url) {
+    ->listen(3000, "kamela-permai.oktaa", function ($url) {
         Console::log("Server Started on {$url}");
     });

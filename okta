@@ -1,8 +1,31 @@
+#!/usr/bin/env php
+
 <?php
+
+use Oktaax\Console;
+use Swoole\Coroutine;
+use Swoole\ExitException;
+
 require_once __DIR__ . "/app/Command/Command.php";
+
+require_once __DIR__ . "/vendor/autoload.php";
 
 $argument = $argv;
 
 
-$command = new Command();
-$command->handle($argument);
+if (count($argument) > 1) {
+
+    Coroutine::run(function () use ($argument) {
+        $command = new Command();
+        try {
+            $command->handle($argument);
+        } catch (ExitException $e) {
+            Console::info("Swoole Exit!");
+        } catch (\Throwable $th) {
+            Console::error($th->getMessage());
+        }
+    });
+} else {
+    echo "empty arguments!\n";
+
+}

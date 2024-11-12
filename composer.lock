@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ded8ed8ebeff79f1a8ace738f810b89b",
+    "content-hash": "7ef428dedea506162b3ddeaedc726855",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -892,16 +892,16 @@
         },
         {
             "name": "jefyokta/oktaax",
-            "version": "v2.0.2",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jefyokta/oktaax.git",
-                "reference": "578883d9637d4144c329aeb7406964dd0871103b"
+                "reference": "d892149555e4f1305b5bb1922f62833586e9ca29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jefyokta/oktaax/zipball/578883d9637d4144c329aeb7406964dd0871103b",
-                "reference": "578883d9637d4144c329aeb7406964dd0871103b",
+                "url": "https://api.github.com/repos/jefyokta/oktaax/zipball/d892149555e4f1305b5bb1922f62833586e9ca29",
+                "reference": "d892149555e4f1305b5bb1922f62833586e9ca29",
                 "shasum": ""
             },
             "require": {
@@ -948,9 +948,9 @@
             ],
             "support": {
                 "issues": "https://github.com/jefyokta/oktaax/issues",
-                "source": "https://github.com/jefyokta/oktaax/tree/v2.0.2"
+                "source": "https://github.com/jefyokta/oktaax/tree/v2.0.3"
             },
-            "time": "2024-11-08T17:11:36+00:00"
+            "time": "2024-11-10T11:41:15+00:00"
         },
         {
             "name": "nesbot/carbon",

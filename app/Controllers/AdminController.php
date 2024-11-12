@@ -38,7 +38,7 @@ class AdminController
    {
       $guest = Guest::select("*");
 
-      if ($req->get['filter'] == null) {
+      if (!isset($req->get['filter'])) {
          $guest = $guest;
       } else {
          if ($req->get['filter'] ?? false) {

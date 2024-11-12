@@ -2,14 +2,16 @@
 
 use Swoole\Coroutine;
 
+
 class Command
 {
+
+
     public function handle(array $argument)
     {
 
         switch ($argument[1]) {
             case 'start':
-
                 require_once __DIR__ . "/../../index.php";
                 break;
 
@@ -21,6 +23,23 @@ class Command
             case "test":
                 $test =  require __DIR__ . "/../Test/Test.php";
                 $test->run();
+                break;
+            case "migrate":
+                require_once __DIR__ . "/../init.php";
+
+                foreach (glob(__DIR__ . "/../Models/*.php") as $model) {
+
+                    require  $model;
+             
+                    $modelName = basename($model, ".php");
+                    $fullClassName = "Kamela\\Models\\" . $modelName;
+
+                    if (class_exists($fullClassName)) {
+                        $fullClassName::migrate();
+                    } else {
+                        echo "migration failed for $modelName\n";
+                    }
+                }
                 break;
             default:
                 # code...
