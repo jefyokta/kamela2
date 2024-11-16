@@ -15,17 +15,14 @@ $argument = $argv;
 
 if (count($argument) > 1) {
 
-    Coroutine::run(function () use ($argument) {
-        $command = new Command();
-        try {
-            $command->handle($argument);
-        } catch (ExitException $e) {
-            Console::info("Swoole Exit!");
-        } catch (\Throwable $th) {
-            Console::error($th->getMessage());
-        }
-    });
+    $command = new Command();
+    try {
+        $command->handle($argument);
+    } catch (ExitException $e) {
+        Console::info("Swoole Exit!");
+    } catch (\Throwable $th) {
+        Console::error($th->getMessage());
+    }
 } else {
     echo "empty arguments!\n";
-
 }

@@ -25,21 +25,24 @@ class Command
                 $test->run();
                 break;
             case "migrate":
-                require_once __DIR__ . "/../init.php";
 
-                foreach (glob(__DIR__ . "/../Models/*.php") as $model) {
+                Coroutine::run(function () {
+                    require_once __DIR__ . "/../init.php";
 
-                    require  $model;
-             
-                    $modelName = basename($model, ".php");
-                    $fullClassName = "Kamela\\Models\\" . $modelName;
+                    foreach (glob(__DIR__ . "/../Models/*.php") as $model) {
 
-                    if (class_exists($fullClassName)) {
-                        $fullClassName::migrate();
-                    } else {
-                        echo "migration failed for $modelName\n";
+                        require  $model;
+
+                        $modelName = basename($model, ".php");
+                        $fullClassName = "Kamela\\Models\\" . $modelName;
+
+                        if (class_exists($fullClassName)) {
+                            $fullClassName::migrate();
+                        } else {
+                            echo "migration failed for $modelName\n";
+                        }
                     }
-                }
+                });
                 break;
             default:
                 # code...

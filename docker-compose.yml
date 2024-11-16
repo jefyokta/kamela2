@@ -1,0 +1,39 @@
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - .env:/app/.env
+
+    environment:
+      - APP_KEY=base64:kfjdsoifoindfoidsnfoidsnofndsofns
+      - APP_NAME=kamela
+      - APP_HOST=0.0.0.0
+      - APP_PORT=8000
+      - DB_CONNECTION=mysql
+      - DB_HOST=mysql 
+      - DB_PORT=3306
+      - DB_DATABASE=Kamela
+      - DB_USERNAME=root
+      - DB_PASSWORD=root
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Kamela 
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

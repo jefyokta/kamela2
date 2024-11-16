@@ -14,6 +14,7 @@ use Kamela\Middleware\Auth;
 use Kamela\Middleware\BodyParser;
 use Kamela\Websocket\Notification;
 use Oktaax\Console;
+use Oktaax\Http\Middleware\Logger;
 use Oktaax\Http\Request;
 use Oktaax\Http\Response;
 use Oktaax\Oktaax;
@@ -49,7 +50,7 @@ $app->set("blade", ["cacheDir" => __DIR__ . "/storage/views", "functionsDir" => 
  * ------------------- 
  * 
  */
-
+$app->use(Logger::handle());
 $app->use(BodyParser::index());
 /**
  * 
@@ -233,7 +234,7 @@ $app->ws("/notification", [Notification::class, 'handle'])
 
 
 $app
-    ->withSSL(__DIR__ . "/cert/kamela-cert.pem", __DIR__ . "/cert/kamela-key.pem")
-    ->listen(3000, "kamela-permai.oktaa", function ($url) {
+    // ->withSSL(__DIR__ . "/cert/kamela-cert.pem", __DIR__ . "/cert/kamela-key.pem")
+    ->listen(3000, "0.0.0.0", function ($url) {
         Console::log("Server Started on {$url}");
     });
