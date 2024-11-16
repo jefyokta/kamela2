@@ -6,9 +6,9 @@
 - php-ext openswoole
 
 ### Built with:
-Frontend: blade,tailwindcss,flowbite
-Backend: Php, jefyokta/oktaax
-Database: Mysql
+- Frontend: blade,tailwindcss,flowbite
+- Backend: Php, jefyokta/oktaax
+- Database: Mysql
 
 ### Docker guide
 - run ```docker compose create```

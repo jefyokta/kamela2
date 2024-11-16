@@ -161,7 +161,7 @@ $app->get('/siteplan', [HomeController::class, 'siteplan']);
 $app->get("/house/booking", [GuestController::class, 'booking']);
 $app->get("/contact", function ($req, $res) {
 
-    $res->render('pages.contact');
+    $res->render('pages.contact',["active"=>0]);
 });
 
 

@@ -3,7 +3,6 @@
 <?php
 
 use Oktaax\Console;
-use Swoole\Coroutine;
 use Swoole\ExitException;
 
 require_once __DIR__ . "/app/Command/Command.php";

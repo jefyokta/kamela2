@@ -67,13 +67,13 @@ ORDER BY type.id DESC;
     {
         $active = 3;
 
-        $response->render("pages.guide", compact("active"));
+        $response->render("pages.guide", ["active" => $active]);
     }
 
     public function login(Request $request, Response $response)
     {
         $active = 0;
-
-        $response->render("pages.login", compact("active"));
+echo $active;
+        $response->render("pages.login", ["active" => $active]);
     }
 }

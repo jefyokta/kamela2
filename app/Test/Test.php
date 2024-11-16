@@ -11,29 +11,19 @@ use Swoole\Coroutine;
 use Swoole\Coroutine\Channel;
 use Swoole\Coroutine\Http\Client as HttpClient;
 
-require_once __DIR__ . "/../../vendor/autoload.php";
+require_once __DIR__ . "/../../app/init.php";
 
 return new class
 {
     public function run()
     {
 
-        function getMimeType($file)
-        {
-            // Memastikan file ada
-            if (!is_file($file)) {
-                return false;
-            }
 
-            // Menggunakan finfo untuk mendeteksi MIME type
-            $finfo = finfo_open(FILEINFO_MIME_TYPE); // Dapatkan tipe MIME
-            $mimeType = finfo_file($finfo, $file);
-            finfo_close($finfo);
+        Coroutine::run(function () {
+            $houses = House::select("*")->get();
 
-            return $mimeType;
-        }
-
-       echo getMimeType(__DIR__."/../../public/build/assets/app-CudV09GM.js");
+            Coroutine::writeFile(storagePath("houses.json"), json_encode($houses, JSON_PRETTY_PRINT));
+        });
     }
 
     public function seed()

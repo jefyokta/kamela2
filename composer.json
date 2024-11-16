@@ -9,7 +9,8 @@
         "psr-4":{
             "Kamela\\Services\\":"app/Services",
             "Kamela\\Models\\":"app/Models",
-            "Kamela\\":"app/"
+            "Kamela\\":"app/",
+            "oktaa\\Database\\":"database/"
 
         }
     }

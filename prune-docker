@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#warning this command will remove all your images, container etc.!
+
+
 echo "Cleaning up Docker containers, images, volumes, and networks..."
 
 echo "Stopping all running containers..."

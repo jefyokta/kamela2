@@ -1,5 +1,6 @@
 <?php
 
+use oktaa\Database\Seeder;
 use Swoole\Coroutine;
 
 
@@ -43,6 +44,13 @@ class Command
                         }
                     }
                 });
+                break;
+
+            case 'db:seed':
+                require_once __DIR__ . "/../init.php";
+
+                $seeder = new Seeder;
+                $seeder->run();
                 break;
             default:
                 # code...
