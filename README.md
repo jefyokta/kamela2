@@ -10,3 +10,7 @@ Frontend: blade,tailwindcss,flowbite
 Backend: Php, jefyokta/oktaax
 Database: Mysql
 
+### Docker guide
+- run ```docker compose create```
+- check container status ``` docker compose ps ```
+- if there is no active container, run ``` docker compose start ```
