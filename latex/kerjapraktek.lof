@@ -1,0 +1,89 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Struktur Organisasi}}{5}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ilustrasi Model Air Terjun (\textit {Waterfall})}}{6}{figure.caption.17}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Metodologi Kerja Praktek}}{13}{figure.caption.21}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \textit {Use Case Diagram}}}{19}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Activity Diagram} Login}}{32}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \textit {Activity Diagram} Melihat Data Transaksi (Admin)}}{33}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \textit {Activity Diagram} Melihat Laporan Data Keuangan (Admin)}}{33}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \textit {Activity Diagram} Menambahkan akun kasir \textit {}Karyawan (Admin)}}{34}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \textit {Activity Diagram} Menambahkan Harga Laundry (Admin)}}{35}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \textit {Activity Diagram} Hapus Harga Laundry (Admin)}}{36}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \textit {Activity Diagram} Edit Harga Laundry (Admin)}}{37}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces \textit {Activity Diagram} Edit Profil (Admin)}}{38}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces \textit {Activity Diagram} Tambah Data Bank (Admin)}}{39}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces \textit {Activity Diagram} Pengaturan Web (Admin)}}{40}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces \textit {Activity Diagram} Menambahkan Data Customer (Karyawan)}}{41}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces \textit {Activity Diagram} Menambahkan Order Baru (Karyawan)}}{41}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces \textit {Activity Diagram} Perbarui Status Order (Karyawan)}}{42}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces \textit {Activity Diagram} Detail Data Customer (Karyawan)}}{43}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces \textit {Activity Diagram} Cetak Invoice (Karyawan)}}{43}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces \textit {Activity Diagram} Laporan (Karyawan)}}{44}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces \textit {Activity Diagram} Edit Profil (Karyawan)}}{45}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces \textit {Activity Diagram} Broadcast Customer (Karyawan)}}{46}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces \textit {Activity Diagram} Riwayat Transaksi (Customer)}}{46}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces \textit {Activity Diagram} Edit Profil (Customer)}}{47}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces \textit {Activity Diagram} Cek Pesanan (Customer)}}{47}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces \textit {Class Diagram}}}{48}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Perancangan Halaman Utama (Homepage)}}{53}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Perancangan Halaman Login}}{53}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Perancangan Halaman Dashboard (Admin}}{54}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Perancangan Halaman Data Karyawan (Admin)}}{54}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Perancangan Halaman Tambah Data Karyawan (Admin)}}{55}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Perancangan Halaman Data Customer (Admin)}}{55}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces Perancangan Halaman Detail Data Customer (Admin)}}{56}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces Perancangan Halaman Data Transaksi (Admin)}}{56}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces Perancangan Halaman Invoice Customer (Admin)}}{56}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.33}{\ignorespaces Perancangan Halaman Data Laporan Transaksi (Admin)}}{57}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces Perancangan Halaman Data Harga Laundry (Admin)}}{57}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces Perancangan Halaman Edit Data Harga Laundry (Admin)}}{58}{figure.caption.58}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces Perancangan Halaman Hapus Data Harga Laundry (Admin)}}{58}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.37}{\ignorespaces Perancangan Halaman Edit Profil (Admin)}}{59}{figure.caption.60}%
+\contentsline {figure}{\numberline {4.38}{\ignorespaces Perancangan Halaman Pengaturan Web (Admin)}}{59}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.39}{\ignorespaces Perancangan Halaman Dashboard (Karyawan)}}{60}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.40}{\ignorespaces Perancangan Halaman Order (Karyawan)}}{60}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.41}{\ignorespaces Perancangan Halaman Data Customer (Karyawan)}}{61}{figure.caption.64}%
+\contentsline {figure}{\numberline {4.42}{\ignorespaces Perancangan Halaman Tambah Customer Baru (Karyawan)}}{61}{figure.caption.65}%
+\contentsline {figure}{\numberline {4.43}{\ignorespaces Perancangan Halaman Tambah Order Baru (Karyawan)}}{62}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.44}{\ignorespaces Perancangan Halaman Invoice Customer (Karyawan)}}{62}{figure.caption.67}%
+\contentsline {figure}{\numberline {4.45}{\ignorespaces Perancangan Halaman Broadcast Customer (Karyawan)}}{63}{figure.caption.68}%
+\contentsline {figure}{\numberline {4.46}{\ignorespaces Perancangan Halaman Laporan Laundry (Karyawan)}}{63}{figure.caption.69}%
+\contentsline {figure}{\numberline {4.47}{\ignorespaces Perancangan Halaman Edit Profil (Karyawan)}}{64}{figure.caption.70}%
+\contentsline {figure}{\numberline {4.48}{\ignorespaces Perancangan Halaman Dashboard (Customer}}{64}{figure.caption.71}%
+\contentsline {figure}{\numberline {4.49}{\ignorespaces Perancangan Halaman Edit Profil (Customer)}}{65}{figure.caption.72}%
+\contentsline {figure}{\numberline {4.50}{\ignorespaces Perancangan Halaman Cek Status Laundry (Customer)}}{65}{figure.caption.73}%
+\contentsline {figure}{\numberline {4.51}{\ignorespaces Halaman Utama (Homepage)}}{66}{figure.caption.74}%
+\contentsline {figure}{\numberline {4.52}{\ignorespaces Halaman Login}}{66}{figure.caption.75}%
+\contentsline {figure}{\numberline {4.53}{\ignorespaces Halaman Dashboard (Admin)}}{66}{figure.caption.76}%
+\contentsline {figure}{\numberline {4.54}{\ignorespaces Halaman Data Karyawan (Admin)}}{67}{figure.caption.77}%
+\contentsline {figure}{\numberline {4.55}{\ignorespaces Halaman Tambah Data Karyawan (Admin)}}{67}{figure.caption.78}%
+\contentsline {figure}{\numberline {4.56}{\ignorespaces Halaman Data Customer (Admin)}}{68}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.57}{\ignorespaces Halaman Detail Data Customer (Admin)}}{68}{figure.caption.80}%
+\contentsline {figure}{\numberline {4.58}{\ignorespaces Halaman Data Transaksi (Admin)}}{68}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.59}{\ignorespaces Halaman Invoice Customer (Admin)}}{69}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.60}{\ignorespaces Halaman Data Laporan Transaksi (Admin)}}{69}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.61}{\ignorespaces Halaman Data Harga Laundry (Admin)}}{70}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.62}{\ignorespaces Halaman Edit Data Harga Laundry (Admin)}}{70}{figure.caption.85}%
+\contentsline {figure}{\numberline {4.63}{\ignorespaces Halaman Hapus Data Harga Laundry (Admin)}}{70}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.64}{\ignorespaces Halaman Edit Profil (Admin)}}{71}{figure.caption.87}%
+\contentsline {figure}{\numberline {4.65}{\ignorespaces Halaman Pengaturan Web (Admin)}}{71}{figure.caption.88}%
+\contentsline {figure}{\numberline {4.66}{\ignorespaces Halaman Dashboard (Karyawan)}}{72}{figure.caption.89}%
+\contentsline {figure}{\numberline {4.67}{\ignorespaces Halaman Order (Karyawan)}}{72}{figure.caption.90}%
+\contentsline {figure}{\numberline {4.68}{\ignorespaces Halaman Data Customer (Karyawan)}}{73}{figure.caption.91}%
+\contentsline {figure}{\numberline {4.69}{\ignorespaces Halaman Tambah Customer Baru (Karyawan)}}{73}{figure.caption.92}%
+\contentsline {figure}{\numberline {4.70}{\ignorespaces Halaman Tambah Customer Baru (Karyawan)}}{74}{figure.caption.93}%
+\contentsline {figure}{\numberline {4.71}{\ignorespaces Halaman Invoice Customer (Karyawan)}}{74}{figure.caption.94}%
+\contentsline {figure}{\numberline {4.72}{\ignorespaces Halaman Broacast Customer (Karyawan)}}{75}{figure.caption.95}%
+\contentsline {figure}{\numberline {4.73}{\ignorespaces Halaman Laporan Laundry (Karyawan)}}{75}{figure.caption.96}%
+\contentsline {figure}{\numberline {4.74}{\ignorespaces Halaman Edit Profil (Karyawan)}}{76}{figure.caption.97}%
+\contentsline {figure}{\numberline {4.75}{\ignorespaces Halaman Dashboard (Customer)}}{76}{figure.caption.98}%
+\contentsline {figure}{\numberline {4.76}{\ignorespaces Halaman Edit Profil (Customer)}}{76}{figure.caption.99}%
+\contentsline {figure}{\numberline {4.77}{\ignorespaces Halaman Cek Status Laundry (Customer)}}{77}{figure.caption.100}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
