@@ -1,0 +1,16 @@
+<?php
+
+namespace Kamela\Controller;
+
+use Oktaax\Http\Request;
+use Oktaax\Http\Response;
+
+class ${name}Controller
+{
+
+    public function index(Request $request, Response $response)
+    {
+
+        $response->end("hello world!");
+    }
+}

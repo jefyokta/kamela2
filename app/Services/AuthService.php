@@ -11,14 +11,13 @@ class AuthService
         $user =  User::find($username);
 
         if (!$user) {
-           return false;
+            return false;
         }
-        if ($user->password === $password) {
+        if (password_verify($password,$user->password)) {
             return $user;
         } else {
 
             return false;
         }
     }
-
 };

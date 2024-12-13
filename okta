@@ -12,9 +12,9 @@ require_once __DIR__ . "/vendor/autoload.php";
 $argument = $argv;
 
 
+$command = new Command();
 if (count($argument) > 1) {
 
-    $command = new Command();
     try {
         $command->handle($argument);
     } catch (ExitException $e) {
@@ -23,5 +23,20 @@ if (count($argument) > 1) {
         Console::error($th->getMessage());
     }
 } else {
-    echo "empty arguments!\n";
+    $commands = $command->getCommands();
+    echo "available commands \n";
+    echo "\n";
+    foreach ($commands as $key => $value) {
+        echo "$key : $value \n";
+    }
+    echo "\n";
+
+   
+  while ( $f = readline()) {
+    if ($f === "exit"|| $f==="exit;") {
+        echo "bye! ";
+        sleep(1);
+        exit;
+    }
+  }
 }

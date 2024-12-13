@@ -11,7 +11,7 @@ class User extends Database
     protected array $definition = [
         "id" => "INT AUTO_INCREMENT PRIMARY KEY",
         "username" => "VARCHAR(255)",
-        "password" => "VARCHAR(15)",
+        "password" => "VARCHAR(255)",
         "token" => "LONGTEXT DEFAULT NULL",
         "role" => "VARCHAR(255)",
  

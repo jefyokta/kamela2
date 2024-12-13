@@ -41,7 +41,7 @@
                         <h1 class="text-md font-semibold  max-w-max text-green-400/90 rounded-lg">Cash</h1>
                         <div>
                             <h1 class="text-3xl font-bold">{{ $method }} Tamu</h1>
-                            @if ($monthly !== 0)
+                            @if ($monthly > 0 && $method > 0)
                                 <p class="text-slate-400">{{ floor(($method / $monthly) * 100) }}% dari total tamu</p>
                             @else
                                 <p class="text-slate-400">{{ 0 }}% dari total tamu</p>
@@ -52,8 +52,9 @@
                         <h1 class="text-md text-yellow-300/90 font-semibold">Credit</h1>
                         <div>
                             <h1 class="text-3xl font-bold">{{ $monthly - $method }} Tamu</h1>
-                            @if ($monthly !== 0)
-                                <p class="text-slate-400">{{ floor((($monthly - $method) / $monthly) * 100) }}% dari total tamu</p>
+                            @if ($monthly > 0 &&  $method > 0)
+                                <p class="text-slate-400">{{ floor((($monthly - $method) / $monthly) * 100) }}% dari total
+                                    tamu</p>
                             @else
                                 <p class="text-slate-400">{{ 0 }}% dari total tamu</p>
                             @endif

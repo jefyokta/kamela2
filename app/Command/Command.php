@@ -1,13 +1,20 @@
 <?php
 
 use oktaa\Database\Seeder;
+use Oktaax\Console;
 use Swoole\Coroutine;
 
 
 class Command
 {
 
-
+    private $commands = [
+        "start" => "start the server",
+        "make Controller <name>" => "make Controller",
+        "test" => "run test code",
+        "migrate" => "run database migrate",
+        "db:seed" => "run database seeder"
+    ];
     public function handle(array $argument)
     {
 
@@ -63,21 +70,11 @@ class Command
 
         switch ($kind) {
             case 'controller':
-                $data =
-                    "<?php 
+                $template = Coroutine::readFile(__DIR__ . "/templates/Controller.okta");
+                $data = str_replace('${name}', $name, $template);
 
-namespace Kamela\\Controller;
-                
-use Oktaax\\Http\\Request;
-use Oktaax\\Http\\Response;
-                
-class {$name}Controller 
-{
-    public function index(Request \$req, Response \$res)
-    {
-        \$res->end(\"Hello World \");
-    }
-}";
+                Console::info("creating {$name}Controller....\n");
+
                 Coroutine::writeFile(__DIR__ . "/../Controllers/{$name}Controller.php", $data);
                 break;
 
@@ -88,4 +85,11 @@ class {$name}Controller
     }
 
     private function handleEmptyMake($kind) {}
+
+
+
+    public function getCommands()
+    {
+        return $this->commands;
+    }
 }

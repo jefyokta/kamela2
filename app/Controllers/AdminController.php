@@ -15,6 +15,9 @@ class AdminController
    public function index(Request $req, Response $res)
    {
       $monthly = $this->monthly();
+      // var_dump($monthly);
+      // Console::log($monthly);
+
       $type36 = (object) $this->soldAndUnsold("type36");
       $type45 = (object) $this->soldAndUnsold("type45");
       $type66 = (object) $this->soldAndUnsold("type66");
@@ -105,7 +108,7 @@ class AdminController
 
    private function mothlymethod()
    {
-      return floor((Guest::raw("SELECT * FROM tamu WHERE metode = 1 AND MONTH(created_at) = MONTH(CURDATE()) AND YEAR(created_at) = YEAR(CURDATE());")->run(true) ?? 0)*100)/100;
+      return floor((Guest::raw("SELECT * FROM tamu WHERE metode = 1 AND MONTH(created_at) = MONTH(CURDATE()) AND YEAR(created_at) = YEAR(CURDATE());")->run(true) ?? 0) * 100) / 100;
    }
 
    private function soldAndUnsold($type = null): array
@@ -128,8 +131,7 @@ class AdminController
 
    private function increment($cur, $lastMonth)
    {
-      Console::log("Current: " . $cur . " (type: " . gettype($cur) . ")");
-      Console::log("Last Month: " . $lastMonth . " (type: " . gettype($lastMonth) . ")");
+    
       try {
          if ($cur === 0) {
             Console::log("Current is zero, returning -100%");
@@ -143,7 +145,6 @@ class AdminController
             return 0;
          }
       } catch (\Throwable $th) {
-         //throw $th;
          Console::log($th->getMessage() . " " . $th->getLine());
       }
    }

@@ -10,7 +10,7 @@ class Type extends Database
     protected string $table = 'type';
 
     protected array $definition = [
-        "id" => "INT PRIMARY KEY",
+        "id" => "VARCHAR(255) PRIMARY KEY",
         "3dmodel" => "VARCHAR(255)",
         "fullsphere" => "VARCHAR(255)",
         "price" => "BIGINT",

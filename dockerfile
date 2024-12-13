@@ -1,5 +1,4 @@
 FROM php:8.3-cli
-RUN docker-php-ext-install pdo pdo_mysql
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
@@ -19,7 +18,11 @@ WORKDIR /app
 COPY . .
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# RUN composer install
+RUN composer install
 
+COPY docker-entry.sh /usr/local/bin/docker-entry.sh
+RUN chmod +x /usr/local/bin/docker-entry.sh
+
+ENTRYPOINT ["docker-entry.sh"]
 
 CMD ["php","okta","start"]

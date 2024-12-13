@@ -234,7 +234,7 @@ $app->ws("/notification", [Notification::class, 'handle'])
 
 
 $app
-    // ->withSSL(__DIR__ . "/cert/kamela-cert.pem", __DIR__ . "/cert/kamela-key.pem")
-    ->listen(3000, "0.0.0.0", function ($url) {
+    ->withSSL(__DIR__ . "/cert/kamela-cert.pem", __DIR__ . "/cert/kamela-key.pem")
+    ->listen(3000, "kamela-permai.oktaa", function ($url) {
         Console::log("Server Started on {$url}");
     });
