@@ -1,35 +1,25 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces \textit {Simbol Use Case Diagram}}}{7}{table.2.1}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Simbol \textit {Activity Diagram}}}{8}{table.caption.18}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Simbol \textit {Class Diagram}}}{9}{table.caption.19}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces \textit {Simbol Use Case Diagram}}}{8}{table.2.1}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Simbol \textit {Activity Diagram}}}{9}{table.2.2}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Simbol \textit {Class Diagram}}}{10}{table.2.3}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Jadwal Kerja Praktek}}{11}{table.caption.20}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Jadwal Kerja Praktek}}{12}{table.caption.17}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Kebutuhan Perangkat Lunak Sistem Usulan (\textit {Software})}}{17}{table.caption.22}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Kebutuhan Perangkat Keras Sistem Usulan (\textit {Hardware})}}{17}{table.caption.23}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Deskripsi \textit {Use Case} Diagram}}{19}{table.4.3}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Skenario \textit {Use Case Login}}}{21}{table.4.4}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Skenario \textit {Use Case} Data Keuangan}}{21}{table.4.5}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Skenario \textit {Use Case} Data \textit {User}}}{22}{table.4.6}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Skenario \textit {Use Case} Data Transaksi}}{23}{table.4.7}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Skenario \textit {Use Case} Pengaturan Web}}{23}{table.4.8}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces Skenario \textit {Use Case} Kelola Harga}}{24}{table.4.9}%
-\contentsline {table}{\numberline {4.10}{\ignorespaces Skenario \textit {Use Case} Kelola Akun Karyawan}}{25}{table.4.10}%
-\contentsline {table}{\numberline {4.11}{\ignorespaces Skenario \textit {Use Case} Edit Profil}}{26}{table.4.11}%
-\contentsline {table}{\numberline {4.12}{\ignorespaces Skenario \textit {Use Case} Kelola Transaksi}}{27}{table.4.12}%
-\contentsline {table}{\numberline {4.13}{\ignorespaces Skenario \textit {Use Case} Data \textit {Customer}}}{27}{table.4.13}%
-\contentsline {table}{\numberline {4.14}{\ignorespaces Skenario \textit {Use Case} Laporan}}{28}{table.4.14}%
-\contentsline {table}{\numberline {4.15}{\ignorespaces Skenario \textit {Use Case} Kirim Pesan Broadcast}}{29}{table.4.15}%
-\contentsline {table}{\numberline {4.16}{\ignorespaces Skenario \textit {Use Case} Riwayat Transaksi}}{30}{table.4.16}%
-\contentsline {table}{\numberline {4.17}{\ignorespaces Skenario \textit {Use Case} Cek Pesanan}}{31}{table.4.17}%
-\contentsline {table}{\numberline {4.18}{\ignorespaces Tabel User}}{49}{table.4.18}%
-\contentsline {table}{\numberline {4.19}{\ignorespaces Tabel Data Bank}}{49}{table.4.19}%
-\contentsline {table}{\numberline {4.20}{\ignorespaces Tabel Transaksi}}{50}{table.4.20}%
-\contentsline {table}{\numberline {4.21}{\ignorespaces Tabel Harga}}{51}{table.4.21}%
-\contentsline {table}{\numberline {4.22}{\ignorespaces Tabel Pengaturan Laundry}}{51}{table.4.22}%
-\contentsline {table}{\numberline {4.23}{\ignorespaces Tabel Pengaturan Notifikasi}}{51}{table.4.23}%
-\contentsline {table}{\numberline {4.24}{\ignorespaces Tabel Pengaturan Notifikasi}}{52}{table.4.24}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Deskripsi Aktor}}{21}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Deskripsi \textit {Use Case} Diagram}}{22}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Skenario \textit {Use Case Login}}}{22}{table.4.3}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Skenario \textit {Use Case} Kelola Data Rumah}}{23}{table.4.4}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Skenario \textit {Use Case} Kelola Data Tamu}}{24}{table.4.5}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Skenario \textit {Use Case} Booking}}{25}{table.4.6}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Skenario \textit {Use Case} Kelola Data Tamu}}{26}{table.4.7}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Skenario \textit {Use Case} Kelola Data Riwayat}}{27}{table.4.8}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Tabel Struktur Database User}}{33}{table.4.9}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces Tabel Struktur Type}}{34}{table.4.10}%
+\contentsline {table}{\numberline {4.11}{\ignorespaces Tabel Struktur House}}{34}{table.4.11}%
+\contentsline {table}{\numberline {4.12}{\ignorespaces Tabel Guest}}{35}{table.4.12}%
+\contentsline {table}{\numberline {4.13}{\ignorespaces Tabel Struktur Database Gallery}}{35}{table.4.13}%
+\contentsline {table}{\numberline {4.14}{\ignorespaces \textit {Black Box Testing}}}{48}{table.4.14}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
