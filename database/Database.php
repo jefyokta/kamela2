@@ -10,7 +10,7 @@ use Oktaax\Console;
 use Swoole\Coroutine;
 use Swoole\Process;
 
-Runtime::enableCoroutine(true, SWOOLE_HOOK_ALL);
+Runtime::enableCoroutine(true);
 
 abstract class Database
 {

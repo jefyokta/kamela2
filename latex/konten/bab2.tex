@@ -58,7 +58,7 @@ Siklus Sistem Informasi adalah data yang diolah melalui model menjadi informasi,
 	\end{enumerate}
 %-----------------------------------------------------------------------------%
 \section{Oktaax}
-\par Oktaax merupakan pustaka PHP yang ringan dan dirancang untuk aplikasi berbasis event-driven, yang cocok digunakan untuk aplikasi dengan kebutuhan concurrency tinggi. Pustaka ini memungkinkan pengelolaan koneksi WebSocket secara efisien, mendukung pengembangan aplikasi dengan waktu respons yang cepat, serta mempermudah integrasi dalam server berbasis PHP. Keunggulan utama pustaka ini terletak pada kesederhanaannya dalam penggunaan, memungkinkan pengembangan yang lebih cepat tanpa mengorbankan performa, yang menjadikannya pilihan ideal untuk aplikasi real-time seperti dashboard interaktif.
+\par Oktaax merupakan pustaka PHP yang ringan dan dirancang untuk aplikasi berbasis event-driven, yang cocok digunakan untuk aplikasi dengan kebutuhan concurrency tinggi. Pustaka ini memungkinkan pengelolaan koneksi WebSocket secara efisien, mendukung pengembangan aplikasi dengan waktu respons yang cepat, serta mempermudah integrasi dalam server berbasis PHP. Keunggulan utama pustaka ini terletak pada kesederhanaannya dalam penggunaan, memungkinkan pengembangan yang lebih cepat tanpa mengorbankan performa, yang menjadikannya pilihan ideal untuk aplikasi real-time seperti dashboard interaktif \citep{rosyida2021swoole}.
 %-----------------------------------------------------------------------------%
 \section{Perumahan}
 Berdasarkan Undang-undang Nomor 1 tahun 2011 tentang perumahan dan pemukiman. Perumahan adalah kelompok rumah yang berfungsi sebagai lingkungan tempat tinggal atau lingkungan hunian yang dilengkapi dengan sarana dan prasarana lingkungan.
@@ -71,7 +71,7 @@ Berdasarkan Undang-undang Nomor 1 tahun 2011 tentang perumahan dan pemukiman. Pe
 \end{enumerate}
 %-----------------------------------------------------------------------------%
 \section{Model Perancangan \textit{Object Oriented Analysis Design} (\textit{OOAD}) }
-Metode berorientasi objek atau object oriented merupakan paradigma baru dalam rekayasa perangkat lunak yang memandang sistem sebagai kumpulan objek - objek diskrit yang saling berinteraksi. Yang dimaksud dengan berorientasi objek adalah bahwa mengorganisasikan perangkat lunak sebagai kumpulan objek - objek diskrit yang bekerja sama antara informasi atau struktur data dan perilakau \textit{(behavior)} yang mengaturnya \cite{ariska2016rancang}.
+Metode berorientasi objek atau object oriented merupakan paradigma baru dalam rekayasa perangkat lunak yang memandang sistem sebagai kumpulan objek - objek diskrit yang saling berinteraksi. Yang dimaksud dengan berorientasi objek adalah bahwa mengorganisasikan perangkat lunak sebagai kumpulan objek - objek diskrit yang bekerja sama antara informasi atau struktur data dan perilakau \textit{(behavior)} yang mengaturnya \citep{ariska2016rancang}.
 %-----------------------------------------------------------------------------%
 \section{\textit{Unified Modelling Language} (\textit{UML})}
 Menurut (Sugiarti, 2018) adalah sebuah visualisasi, merancang dan mendokumentasikan sistem piranti lunak. Salah satu standar yang digunakan diperindustrian untuk mengetahui dan mendefinisakan requirement, analisis dan desain, dari suatu arsitektur dalam pemrograman berorientasi objek. (Wahyuni, 2022).
@@ -97,25 +97,28 @@ Berikut adalah diagram \textit{UML} yang akan digunakan dalam laporan kerja prak
 \end{enumerate}
 
 \captionsetup{position=above} % Mengatur posisi caption di atas
-\begin{longtable}[c]{|c|>{\centering\arraybackslash}m{2cm}|c|p{8cm}|}
-\caption{\textit{Simbol Use Case Diagram}} \label{tab:my-table}\\ % Caption di atas tabel
-\hline
-No & Gambar & Nama & Keterangan \\ \hline
-\endfirsthead
-%
-\endhead
-%
-1 & \includegraphics[height=1cm, width=1cm]{useCase/actor.jpg} & \textit{Actor} & \textit{Use Case} menggambarkan fungsionalitas yang disediakan sistem sebagai unit-unit yang bertukar pesan antar unit dengan aktor, yang dinyatakan dengan menggunakan kata kerja \\ \hline
-2 & \includegraphics[width=1.5cm]{useCase/dependency.png} & \textit{Dependency} & Hubungan dimana perubahan yang terjadi pada suatu elemen mandiri (\textit{independent}) akan mempengaruhi elemen yang bergantung padanya, elemen yang tidak mandiri (\textit{independent}). \\ \hline
-3 & \includegraphics[width=1.5cm]{useCase/generalization.jpg} & \textit{Generalization} & Hubungan dimana objek anak (\textit{descendent}) berbagi perilaku dan struktur data dari objek yang ada di atasnya objek induk (\textit{ancestor}). \\ \hline
-4 & \includegraphics[width=1.5cm]{useCase/include.jpg} & \textit{Include} & Menspesifikasikan bahwa \textit{use case} sumber secara eksplisit. \\ \hline
-5 & \includegraphics[width=1.5cm]{useCase/extend.png} & \textit{Extend} & Menspesifikasikan bahwa \textit{use case} target memperluas perilaku dari use case sumber pada suatu titik yang diberikan. \\ \hline
-6 & \includegraphics[width=1.5cm]{useCase/association.png} & \textit{Association} & Apa yang menghubungkan antara objek satu dengan objek lainnya. \\ \hline
-7 & \includegraphics[width=1cm, height=1cm]{useCase/system.png} & \textit{System} & Menspesifikasikan paket yang menampilkan sistem secara terbatas. \\ \hline
-8 & \includegraphics[width=1.5cm]{useCase/use case.jpg} & \textit{Use Case} & Deskripsi dari urutan aksi-aksi yang ditampilkan sistem yang menghasilkan. \\ \hline
-\end{longtable}
+\begin{small}
+			\begin{longtable}[c]{|c|>{\centering\arraybackslash}m{2cm}|c|p{7.6cm}|}
+			\caption{\textit{Simbol Use Case Diagram}} \label{tab:my-table}\\ % Caption di atas tabel
+			\hline
+			No & Gambar & Nama & Keterangan \\ \hline
+			\endfirsthead
+			%
+			\endhead
+			%
+			1 & \parbox[c][2cm][c]{2cm}{\centering \includegraphics[height=1cm]{useCase/actor.jpg}} & \textit{Actor} & \textit{Use Case} menggambarkan fungsionalitas yang disediakan sistem sebagai unit-unit yang bertukar pesan antar unit dengan aktor, yang dinyatakan dengan menggunakan kata kerja \\ \hline
+			
+			2 & \raisebox{-.5\height}{\includegraphics[width=1.5cm]{useCase/dependency.png}} & \textit{Dependency} & Hubungan dimana perubahan yang terjadi pada suatu elemen mandiri (\textit{independent}) akan mempengaruhi elemen yang bergantung padanya, elemen yang tidak mandiri (\textit{independent}). \\ \hline
+			3 & \raisebox{-.5\height}{\includegraphics[width=1.5cm]{useCase/generalization.jpg}} & \textit{Generalization} & Hubungan dimana objek anak (\textit{descendent}) berbagi perilaku dan struktur data dari objek yang ada di atasnya objek induk (\textit{ancestor}). \\ \hline
+			4 & \raisebox{-.5\height}{\includegraphics[width=1.5cm]{useCase/include.jpg}} & \textit{Include} & Menspesifikasikan bahwa \textit{use case} sumber secara eksplisit. \\ \hline
+			5 & \raisebox{-.5\height}{\includegraphics[width=1.5cm]{useCase/extend.png}} & \textit{Extend} & Menspesifikasikan bahwa \textit{use case} target memperluas perilaku dari use case sumber pada suatu titik yang diberikan. \\ \hline
+			6 & \raisebox{-.5\height}{\includegraphics[width=1.5cm]{useCase/association.png}} & \textit{Association} & Apa yang menghubungkan antara objek satu dengan objek lainnya. \\ \hline
+			7 & \raisebox{-.5\height}{\includegraphics[width=1cm, height=1cm]{useCase/system.png}} & \textit{System} & Menspesifikasikan paket yang menampilkan sistem secara terbatas. \\ \hline
+			8 & \raisebox{-.5\height}{\includegraphics[width=1.5cm]{useCase/use case.jpg}} & \textit{Use Case} & Deskripsi dari urutan aksi-aksi yang ditampilkan sistem yang menghasilkan. \\ \hline
+			\end{longtable}
+			\end{small}
 
-        \item  \textbf{\textit{Activity Diagram}}\\ \textit{Activity diagram} menggambarkan aliran fungsionalitas dalam suatu sistem informasi. Secara lengkap, \textit{activity diagram} mendefinisikan dimana \textit{workflow} dimulai, dimana berhentinya, aktifitas apa yang terjadi selama \textit{workflow}, dan bagaimana urutan kejadian aktifitas tersebut. \textit{Activity diagram} juga menyediakan pendekatan untuk proses pemodelan paralel. Bagi mereka yang akrab dengan analisis dan desain struktur tradisional, diagram ini menggabungkan ide-ide yang mendasari diagram alir data dan diagram alur sistem. (Dewi et al., 2012). 
+        \item  \textbf{\textit{Activity Diagram}}\\ \textit{Activity diagram} menggambarkan aliran fungsionalitas dalam suatu sistem informasi. Secara lengkap, \textit{activity diagram} mendefinisikan dimana \textit{workflow} dimulai, dimana berhentinya, aktifitas apa yang terjadi selama \textit{workflow}, dan bagaimana urutan kejadian aktifitas tersebut \citep{dicoding2021activity}. \textit{Activity diagram} juga menyediakan pendekatan untuk proses pemodelan paralel. Bagi mereka yang akrab dengan analisis dan desain struktur tradisional, diagram ini menggabungkan ide-ide yang mendasari diagram alir data dan diagram alur sistem. (Dewi et al., 2012). 
 
 		\par Diagram aktivitas berguna untuk sebagai berikut:
 			
@@ -125,54 +128,53 @@ No & Gambar & Nama & Keterangan \\ \hline
 			\item Rancangan tampilan dimana setiap aktivitas dianggap memerlukan sebuah pengujian yang perlu di defenisikan kasus ujinya.
 			\end{enumerate}
         
-\begin{small} % Mengecilkan ukuran font tabel
-\begin{longtable}[c]{|c|>{\centering\arraybackslash}m{3cm}|c|p{7cm}|}
-    \captionsetup{position=above} % Menempatkan caption di atas tabel
-    \caption{Simbol \textit{Activity Diagram}} \label{tab:activity-diagram} \\ \hline
-    \textbf{No} & \textbf{Gambar} & \textbf{Nama} & \textbf{Keterangan} \\ \hline
-    \endfirsthead
-    % Tidak ada header lagi di halaman berikutnya
-    \endhead
-    \hline
-    \endfoot
-    % Konten tabel
-    1 & \includegraphics[width=1.5cm]{activityDiagram/activity.jpg} & \textit{Activity} & Memperlihatkan bagaimana masing-masing kelas antar muka saling berinteraksi satu sama lain \\ \hline
-    2 & \includegraphics[width=1.5cm]{activityDiagram/action.jpg} & \textit{Action} & State dari sistem yang mencerminkan eksekusi dari suatu aksi \\ \hline
-    3 & \includegraphics[width=1.5cm]{activityDiagram/initial node.png} & \textit{Initial Node} & Bagaimana objek dibentuk atau diawali \\ \hline
-    4 & \includegraphics[width=1.5cm]{activityDiagram/activity final node.png} & \textit{Activity Final Node} & Bagaimana objek dibentuk dan dihancurkan \\ \hline
-    5 & \includegraphics[width=1.5cm]{activityDiagram/fork node.jpg} & \textit{Fork Node} & Satu aliran yang pada tahap tertentu berubah menjadi beberapa aliran \\ \hline
-\end{longtable}
-\end{small}
+\begin{small}     
+		\begin{longtable}[c]{|c|>{\centering\arraybackslash}m{2cm}|c|p{8cm}|}
+		    \captionsetup{position=above} % Menempatkan caption di atas tabel
+		    \caption{Simbol \textit{Activity Diagram}} \label{tab:activity-diagram} \\ \hline
+		    \textbf{No} & \textbf{Gambar} & \textbf{Nama} & \textbf{Keterangan} \\ \hline
+		    \endfirsthead
+		    % Tidak ada header lagi di halaman berikutnya
+		    \endhead
+		    \hline
+		    \endfoot
+		    % Konten tabel
+		    1 & \parbox[c][1.5cm][c]{1.5cm}{\centering \includegraphics[width=1.5cm]{activityDiagram/activity.jpg}} & \textit{Activity} & Memperlihatkan bagaimana masing-masing kelas antar muka saling berinteraksi satu sama lain \\ \hline
+		    2 & \parbox[c][1.5cm][c]{1.5cm}{\centering \includegraphics[width=1.5cm]{activityDiagram/action.jpg}} & \textit{Action} & State dari sistem yang mencerminkan eksekusi dari suatu aksi \\ \hline
+		    3 & \parbox[c][2cm][c]{2cm}{\centering \includegraphics[width=1.5cm]{activityDiagram/initial node.png}} & \textit{Initial Node} & Bagaimana objek dibentuk atau diawali \\ \hline
+		    4 & \parbox[c][2cm][c]{2cm}{\centering \includegraphics[width=1.5cm]{activityDiagram/activity final node.png}} & \textit{Final Node} & Bagaimana objek dibentuk dan dihancurkan \\ \hline
+		    5 & \parbox[c][1.5cm][c]{1.5cm}{\centering \includegraphics[width=1.5cm]{activityDiagram/fork node.jpg}} & \textit{Fork Node} & Satu aliran yang pada tahap tertentu berubah menjadi beberapa aliran \\ \hline
+		\end{longtable}
+		\end{small}
 
-    \item \textbf{\textit{Class Diagram}}\\ \textit{Class diagram} adalah salah satu pemodelan yang cukup penting dalam UML, fungsinya adalah untuk membuat sebuat logical models dari sebuah sistem (Wu, 2006). Sebuah class diagram akan menunjukan bagaimana skema dari arsitektur sebuah sistem yang sedang dirancang (Kendal, 2009). \textit{Class diagram} digambarkan dengan class yang berisi atribut dan method, setiap class akan dihubungkan dengan sebuah garis disebut Asosiasi. \cite{aliman2021perancangan}. 
+    \item \textbf{\textit{Class Diagram}}\\ \textit{Class diagram} adalah salah satu pemodelan yang cukup penting dalam UML, fungsinya adalah untuk membuat sebuat \textit{logical models} dari sebuah sistem \citep{setiawan2021class}. Sebuah class diagram akan menunjukan bagaimana skema dari arsitektur sebuah sistem yang sedang dirancang (Kendal, 2009). \textit{Class diagram} digambarkan dengan class yang berisi atribut dan method, setiap class akan dihubungkan dengan sebuah garis disebut Asosiasi. \citep{aliman2021perancangan}. 
     
 \begin{small} % Mengecilkan ukuran font tabel
-\begin{longtable}{|c|>{\centering\arraybackslash}m{2cm}|c|p{7cm}|}
-    \captionsetup{position=above} % Menempatkan caption di atas tabel
-    \caption{Simbol \textit{Class Diagram}} \label{tab:Class-Diagram} \\ \hline
-    \textbf{No} & \textbf{Gambar} & \textbf{Nama} & \textbf{Keterangan} \\ \hline
-    \endfirsthead
-    \multicolumn{4}{c}{Lanjutan dari Tabel \ref{tab:Class-Diagram}} \\ \hline
-    \textbf{No} & \textbf{Gambar} & \textbf{Nama} & \textbf{Keterangan} \\ \hline
-    \endhead
-    \hline
-    \endfoot
-    % Konten tabel
-    1 & \includegraphics[width=1.5cm, height=1cm]{classDiagram/generalization.jpg} & \textit{Generalization} & Hubungan dimana objek anak (descendent) berbagi perilaku dan struktur data dari objek yang ada di atasnya, yaitu objek induk (ancestor). \\ \hline
-    2 & \includegraphics[width=1.5cm]{classDiagram/nary association.png} & \textit{Nary Association} & Upaya untuk menghindari asosiasi dengan lebih dari dua objek. \\ \hline
-    3 & \includegraphics[width=1.5cm]{classDiagram/collaboration.png} & \textit{Collaboration} & Deskripsi dari urutan aksi-aksi yang ditampilkan sistem, yang menghasilkan suatu hasil yang terukur bagi suatu aktor. \\ \hline
-    4 & \includegraphics[width=1.5cm]{classDiagram/class.png} & \textit{Class} & Himpunan dari objek-objek yang berbagi atribut serta operasi yang sama. \\ \hline
-    5 & \includegraphics[width=1.5cm]{classDiagram/realization.jpg} & \textit{Realization} & Operasi yang benar-benar dilakukan oleh suatu objek. \\ \hline
-    6 & \includegraphics[width=1.5cm]{classDiagram/dependency.jpg} & \textit{Dependency} & Hubungan dimana perubahan yang terjadi pada suatu elemen mandiri (independent) akan memengaruhi elemen yang bergantung. \\ \hline
-\end{longtable}
-\end{small}
+	\begin{longtable}{|c|>{\centering\arraybackslash}m{2cm}|c|p{7.2cm}|}
+	    \captionsetup{position=above} % Menempatkan caption di atas tabel
+	    \caption{Simbol \textit{Class Diagram}} \label{tab:Class-Diagram} \\ \hline
+	    \textbf{No} & \textbf{Gambar} & \textbf{Nama} & \textbf{Keterangan} \\ \hline
+	    \endfirsthead
+	    \textbf{No} & \textbf{Gambar} & \textbf{Nama} & \textbf{Keterangan} \\ \hline
+	    \endhead
+	    \hline
+	    \endfoot
+	    % Konten tabel
+	    1 & \parbox[c][2cm][c]{2cm}{\centering \includegraphics[width=1.5cm, height=1cm]{classDiagram/generalization.jpg}} & \textit{Generalization} & Hubungan dimana objek anak (descendent) berbagi perilaku dan struktur data dari objek yang ada di atasnya, yaitu objek induk (ancestor). \\ \hline
+	    2 & \parbox[c][2cm][c]{2cm}{\centering \includegraphics[width=1.5cm]{classDiagram/nary association.png}} & \textit{Nary Association} & Upaya untuk menghindari asosiasi dengan lebih dari dua objek. \\ \hline
+	    3 & \parbox[c][2cm][c]{2cm}{\centering \includegraphics[width=1.5cm]{classDiagram/collaboration.png}} & \textit{Collaboration} & Deskripsi dari urutan aksi-aksi yang ditampilkan sistem, yang menghasilkan suatu hasil yang terukur bagi suatu aktor. \\ \hline
+	    4 & \parbox[c][2cm][c]{2cm}{\centering \includegraphics[width=1.5cm]{classDiagram/class.png}} & \textit{Class} & Himpunan dari objek-objek yang berbagi atribut serta operasi yang sama. \\ \hline
+	    5 & \parbox[c][2cm][c]{2cm}{\centering \includegraphics[width=1.5cm]{classDiagram/realization.jpg}} & \textit{Realization} & Operasi yang benar-benar dilakukan oleh suatu objek. \\ \hline
+	    6 & \parbox[c][2cm][c]{2cm}{\centering \includegraphics[width=1.5cm]{classDiagram/dependency.jpg}} & \textit{Dependency} & Hubungan dimana perubahan yang terjadi pada suatu elemen mandiri (independent) akan memengaruhi elemen yang bergantung. \\ \hline
+	\end{longtable}
+	\end{small}
 
 \end{enumerate}
 % -----------------------------------------------------------------------------%
 
 \section{Metode \textit{Extreme Programming (XP)}}
 % -----------------------------------------------------------------------------%
-\par Penelitian ini menggunakan metode pengembangan sistem \textit{Extreme Programming (XP)}. Metode ini cocok untuk pengerjaan perangkat lunak, karena sifat dari metode ini sendiri dilakukan dengan cepat dan juga cenderung menggunakan pendekatan berorientasi objek dan sasaran dari tim yang dibentuk dalam skala kecil melalui tahapan-tahapan yang meliputi Planning (perencanaan), Design (perancangan), Coding (pengkodean), Testing (pengujian) (Nur Laila S \& Fauzan Azima M, t.t.). 
+\par Penelitian ini menggunakan metode pengembangan sistem \textit{Extreme Programming (XP)}. Metode ini cocok untuk pengerjaan perangkat lunak, karena sifat dari metode ini sendiri dilakukan dengan cepat dan juga cenderung menggunakan pendekatan berorientasi objek dan sasaran dari tim yang dibentuk dalam skala kecil melalui tahapan-tahapan yang meliputi Planning (perencanaan), Design (perancangan), Coding (pengkodean), Testing (pengujian) \citep{andriani2023extreme}. 
 \textit{Extreme Programming (XP)} merupakan sebuah metode pengembangan perangkat lunak yang mencoba meningkatkan efisiensi dan fleksibilitas dalam suatu pengembangan perangkat lunak yang mengombinasikan berbagai ide sederhana tanpa mengurangi kualitas software yang akan dibangun (Sri Ramadhani dkk., 2019).
 
 \par Adapun tahapan dalam metode \textit{Extreme Programming (XP)} yaitu:
